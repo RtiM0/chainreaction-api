@@ -1,0 +1,18 @@
+{
+  "name": "chain_reaction-api",
+  "version": "1.0.0",
+  "description": "API for Chain Reaction",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mustafa Shakir (RtiM0)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12",
+    "socket.io": "^4.4.0"
+  }
+}
