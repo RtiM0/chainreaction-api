@@ -1,7 +1,7 @@
 module.exports = class game {
-    constructor(){
+    constructor(options={players:2}){
         this.game = [...Array(9)].map(() => [...Array(6)].map(() => { return { player: null, mass: 0 } }));
-        this.players = ['red', 'green'];
+        this.players = ['red', 'green','blue','yellow','pink','indigo','purple','gray'].slice(0,options.players);
         this.turn = 0;
         this.check = false;
     }

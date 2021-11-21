@@ -12,7 +12,10 @@ app.get('/', (req, res, next) => res.sendFile(__dirname+'./index.html'));
 
 io.on('connection',(socket) => {
   console.log(`Connected ${socket.id}`);
-  var g = new game();
+  var g;
+  socket.on('options',(options)=> {
+    g = new game(options);
+  });
   socket.on('pos', (pos)=> {
     g.add(JSON.parse(pos));
     socket.emit('game',{game:g.game,players:g.players,turn:g.turn});
