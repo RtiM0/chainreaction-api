@@ -22,7 +22,7 @@ module.exports = class Game {
                     }
                 }
             }
-            if (this.turn + 1 === this.players.length) {
+            if (this.turn + 1 >= this.players.length) {
                 this.turn = 0;
             } else {
                 this.turn++;
